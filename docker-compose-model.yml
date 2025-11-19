@@ -1,0 +1,85 @@
+services:
+  vocal-separation:
+    build:
+      context: .
+      dockerfile: services/vocal-separation/Dockerfile
+      args:
+        UID: ${UID:-1000}
+        GID: ${GID:-1000}
+    container_name: vocal-separation-service
+    runtime: nvidia
+
+    environment:
+      NVIDIA_VISIBLE_DEVICES: all
+      KAFKA_BOOTSTRAP_SERVERS: ${EXTERNAL_IP:-kafka:9092}
+      CHECKPOINT_DIR: /app/checkpoints
+      INPUT_DIR: /app/input
+      OUTPUT_DIR: /app/output
+      CONFIG_DIR: /app/configs
+      LOG_DIR: /app/logs
+      USE_TMP_WORKFLOW: "1"
+      BACKEND_URL: http://backend:8000
+    volumes:
+      - ${DATA_DIR:-./datasets}/input:/app/input
+      - ${DATA_DIR:-./datasets}/separated:/app/output
+      - ./services/vocal-separation/checkpoints:/app/checkpoints
+    restart: always
+    networks:
+      - app-net
+
+  voice-embedding:
+    build:
+      context: .
+      dockerfile: services/voice-embedding/Dockerfile
+      args:
+        UID: ${UID:-1000}
+        GID: ${GID:-1000}
+    container_name: voice-embedding-service
+
+    runtime: nvidia
+    environment:
+      NVIDIA_VISIBLE_DEVICES: all
+      KAFKA_BOOTSTRAP_SERVERS: ${EXTERNAL_IP:-kafka:9092}
+      DATA_DIR: /app/datasets
+      INPUT_DIR: /app/input
+      DB_DIR: /app/db
+      LOG_DIR: /app/logs
+      BACKEND_URL: http://backend:8000
+    volumes:
+      - ${DATA_DIR:-./datasets}:/app/datasets
+      - ${DATA_DIR:-./datasets}/input:/app/input
+      - ${DATA_DIR:-./datasets}/db:/app/db
+    restart: always
+    networks:
+      - app-net
+
+  voice-conversion:
+    build:
+      context: .
+      dockerfile: services/voice-converter/Dockerfile
+      args:
+        UID: ${UID:-1000}
+        GID: ${GID:-1000}
+    container_name: voice-conversion-service
+
+    runtime: nvidia
+    environment:
+      NVIDIA_VISIBLE_DEVICES: all
+      KAFKA_BOOTSTRAP_SERVERS: ${EXTERNAL_IP:-kafka:9092}
+      INPUT_DIR: /app/input
+      OUTPUT_DIR: /app/output
+      LOGDIR: /app/logs
+      BACKEND_URL: http://backend:8000
+      CHECKPOINT_DIR: /app/checkpoints
+    volumes:
+      - ${DATA_DIR:-./datasets}:/app/input
+      - ${DATA_DIR:-./datasets}/converted:/app/output
+      - ./services/voice-converter/checkpoints:/app/checkpoints
+
+    restart: always
+    networks:
+      - app-net
+
+networks:
+  app-net:
+    driver: bridge

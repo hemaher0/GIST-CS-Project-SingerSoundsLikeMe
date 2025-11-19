@@ -1,0 +1,8 @@
+confluent-kafka
+uvicorn
+fastapi
+psycopg2-binary
+gradio
+pydantic[email]
+passlib[bcrypt]
+python-jose[cryptography]

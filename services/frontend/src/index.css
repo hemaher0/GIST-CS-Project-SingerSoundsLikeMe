@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Spline Sans", "Noto Sans", sans-serif;
+  --color-brand-purple: #6b3f8c;
+  --color-brand-purple-light: #7f4c9b;
+  --color-brand-purple-dark: #5a2e6f;
+  --color-dark-bg: #151118;
+  --color-card-bg: #231c26;
+  --color-border-subtle: #332938;
+  --color-border-medium: #4b3c53;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #af9db8;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  background-color: #fef8f3;
+}
+
+.custom-slim-bar .rhap_controls-section,
+.custom-slim-bar .rhap_volume-controls,
+.custom-slim-bar .rhap_time,
+.custom-slim-bar .rhap_additional-controls {
+  display: none !important;
+}
+
+.custom-slim-bar .rhap_progress-container {
+  height: 2px;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-slim-bar .rhap_progress-section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 2px; /* 얇은 진행바 */
+}
+
+.custom-slim-bar .rhap_progress-bar-show-download {
+  background-color: #ddd !important; /* 다운로드된 구간 */
+}
+
+.rhap_progress-bar {
+  background-color: #a78bfa !important; /* 전체 바 */
+}
+
+.rhap_progress-filled {
+  background-color: #6b3f8c !important; /* 채워진 부분 */
+}
+
+.custom-slim-bar .rhap_progress-indicator {
+  display: none !important; /* 포인터 안 보이게 */
+}
+
+.rhap_theme-minimal {
+  box-shadow: none !important;
+}
+
+.rhap_theme-minimal .rhap_controls-section {
+  box-shadow: none !important;
+}
+
+.rhap_controls-section button {
+  color: #a78bfa !important;
+}
+
+.rhap_volume-bar {
+  background-color: #a78bfa !important;
+}

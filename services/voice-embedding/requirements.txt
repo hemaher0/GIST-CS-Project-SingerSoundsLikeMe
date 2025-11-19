@@ -1,0 +1,8 @@
+scikit-learn
+resemblyzer
+fastapi
+uvicorn
+python-multipart
+confluent-kafka
+pandas
+torchaudio
