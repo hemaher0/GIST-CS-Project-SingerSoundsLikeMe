@@ -1,49 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="970" viewBox="0 0 1440 970" role="img" aria-label="검색과 변환 요청의 비동기 처리 순서"><rect width="100%" height="100%" fill="white"/>
-<text x="720" y="48" fill="#253247" font-family="Noto Sans CJK KR, sans-serif" font-size="34" font-weight="700" text-anchor="middle" dominant-baseline="middle">검색·변환 작업의 요청과 결과</text>
-<text x="720" y="92" fill="#617085" font-family="Noto Sans CJK KR, sans-serif" font-size="22" font-weight="400" text-anchor="middle" dominant-baseline="middle">request_id로 접수한 작업과 완료된 결과를 연결</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="970" viewBox="0 0 1440 970" role="img" aria-label="Asynchronous processing of search and conversion requests"><rect width="100%" height="100%" fill="white"/>
+<text x="720" y="48" fill="#253247" font-family="Noto Sans CJK KR, sans-serif" font-size="34" font-weight="700" text-anchor="middle" dominant-baseline="middle">Search and Conversion: Requests and Results</text>
+<text x="720" y="92" fill="#617085" font-family="Noto Sans CJK KR, sans-serif" font-size="22" font-weight="400" text-anchor="middle" dominant-baseline="middle">Link accepted tasks to completed results using request_id</text>
 <rect x="15" y="132" width="250" height="86" rx="12" fill="#f1f4fa" stroke="#ccd5e1" stroke-width="2"/>
-<text x="140" y="158" fill="#253247" font-family="Noto Sans CJK KR, sans-serif" font-size="25" font-weight="700" text-anchor="middle" dominant-baseline="middle">사용자 화면</text>
+<text x="140" y="158" fill="#253247" font-family="Noto Sans CJK KR, sans-serif" font-size="25" font-weight="700" text-anchor="middle" dominant-baseline="middle">User interface</text>
 <text x="140" y="190" fill="#617085" font-family="Noto Sans CJK KR, sans-serif" font-size="19" font-weight="400" text-anchor="middle" dominant-baseline="middle">React</text>
 <line x1="140" y1="220" x2="140" y2="870" stroke="#b8c1cf" stroke-width="2" stroke-dasharray="7 7"/>
 <rect x="395" y="132" width="250" height="86" rx="12" fill="#f1f4fa" stroke="#ccd5e1" stroke-width="2"/>
-<text x="520" y="158" fill="#253247" font-family="Noto Sans CJK KR, sans-serif" font-size="25" font-weight="700" text-anchor="middle" dominant-baseline="middle">웹 서버</text>
+<text x="520" y="158" fill="#253247" font-family="Noto Sans CJK KR, sans-serif" font-size="25" font-weight="700" text-anchor="middle" dominant-baseline="middle">Web server</text>
 <text x="520" y="190" fill="#617085" font-family="Noto Sans CJK KR, sans-serif" font-size="19" font-weight="400" text-anchor="middle" dominant-baseline="middle">FastAPI · PostgreSQL</text>
 <line x1="520" y1="220" x2="520" y2="870" stroke="#b8c1cf" stroke-width="2" stroke-dasharray="7 7"/>
 <rect x="775" y="132" width="250" height="86" rx="12" fill="#f1f4fa" stroke="#ccd5e1" stroke-width="2"/>
-<text x="900" y="158" fill="#253247" font-family="Noto Sans CJK KR, sans-serif" font-size="25" font-weight="700" text-anchor="middle" dominant-baseline="middle">작업 전달</text>
+<text x="900" y="158" fill="#253247" font-family="Noto Sans CJK KR, sans-serif" font-size="25" font-weight="700" text-anchor="middle" dominant-baseline="middle">Task dispatch</text>
 <text x="900" y="190" fill="#617085" font-family="Noto Sans CJK KR, sans-serif" font-size="19" font-weight="400" text-anchor="middle" dominant-baseline="middle">Kafka</text>
 <line x1="900" y1="220" x2="900" y2="870" stroke="#b8c1cf" stroke-width="2" stroke-dasharray="7 7"/>
 <rect x="1155" y="132" width="250" height="86" rx="12" fill="#f1f4fa" stroke="#ccd5e1" stroke-width="2"/>
-<text x="1280" y="158" fill="#253247" font-family="Noto Sans CJK KR, sans-serif" font-size="25" font-weight="700" text-anchor="middle" dominant-baseline="middle">모델 작업자</text>
-<text x="1280" y="190" fill="#617085" font-family="Noto Sans CJK KR, sans-serif" font-size="19" font-weight="400" text-anchor="middle" dominant-baseline="middle">검색 또는 음색 변환</text>
+<text x="1280" y="158" fill="#253247" font-family="Noto Sans CJK KR, sans-serif" font-size="25" font-weight="700" text-anchor="middle" dominant-baseline="middle">Model worker</text>
+<text x="1280" y="190" fill="#617085" font-family="Noto Sans CJK KR, sans-serif" font-size="19" font-weight="400" text-anchor="middle" dominant-baseline="middle">Search / voice conversion</text>
 <line x1="1280" y1="220" x2="1280" y2="870" stroke="#b8c1cf" stroke-width="2" stroke-dasharray="7 7"/>
 <line x1="140" y1="274" x2="520" y2="274" stroke="#6848ae" stroke-width="3"/>
 <polygon points="520,274 507,267 507,281" fill="#6848ae"/>
-<text x="330.0" y="250" fill="#6848ae" font-family="Noto Sans CJK KR, sans-serif" font-size="21" font-weight="400" text-anchor="middle" dominant-baseline="middle">1. 음성·조건 전달</text>
+<text x="330.0" y="250" fill="#6848ae" font-family="Noto Sans CJK KR, sans-serif" font-size="21" font-weight="400" text-anchor="middle" dominant-baseline="middle">1. Send audio and parameters</text>
 <rect x="420" y="298" width="200" height="42" rx="7" fill="#faf7ff" stroke="#e1d6f5" stroke-width="2"/>
-<text x="520" y="319" fill="#253247" font-family="Noto Sans CJK KR, sans-serif" font-size="18" font-weight="400" text-anchor="middle" dominant-baseline="middle">작업 저장: pending</text>
+<text x="520" y="319" fill="#253247" font-family="Noto Sans CJK KR, sans-serif" font-size="18" font-weight="400" text-anchor="middle" dominant-baseline="middle">Save task: pending</text>
 <line x1="520" y1="378" x2="140" y2="378" stroke="#6848ae" stroke-width="3"/>
 <polygon points="140,378 153,371 153,385" fill="#6848ae"/>
-<text x="330.0" y="354" fill="#6848ae" font-family="Noto Sans CJK KR, sans-serif" font-size="21" font-weight="400" text-anchor="middle" dominant-baseline="middle">2. request_id 반환</text>
+<text x="330.0" y="354" fill="#6848ae" font-family="Noto Sans CJK KR, sans-serif" font-size="21" font-weight="400" text-anchor="middle" dominant-baseline="middle">2. Return request_id</text>
 <line x1="520" y1="444" x2="900" y2="444" stroke="#6848ae" stroke-width="3"/>
 <polygon points="900,444 887,437 887,451" fill="#6848ae"/>
-<text x="710.0" y="420" fill="#6848ae" font-family="Noto Sans CJK KR, sans-serif" font-size="21" font-weight="400" text-anchor="middle" dominant-baseline="middle">3. 작업 메시지 전달</text>
+<text x="710.0" y="420" fill="#6848ae" font-family="Noto Sans CJK KR, sans-serif" font-size="21" font-weight="400" text-anchor="middle" dominant-baseline="middle">3. Send task message</text>
 <line x1="900" y1="510" x2="1280" y2="510" stroke="#6848ae" stroke-width="3"/>
 <polygon points="1280,510 1267,503 1267,517" fill="#6848ae"/>
-<text x="1090.0" y="486" fill="#6848ae" font-family="Noto Sans CJK KR, sans-serif" font-size="21" font-weight="400" text-anchor="middle" dominant-baseline="middle">4. 메시지 수신·추론</text>
+<text x="1090.0" y="486" fill="#6848ae" font-family="Noto Sans CJK KR, sans-serif" font-size="21" font-weight="400" text-anchor="middle" dominant-baseline="middle">4. Receive message; run inference</text>
 <line x1="1280" y1="614" x2="520" y2="614" stroke="#6848ae" stroke-width="3"/>
 <polygon points="520,614 533,607 533,621" fill="#6848ae"/>
-<text x="900.0" y="590" fill="#6848ae" font-family="Noto Sans CJK KR, sans-serif" font-size="21" font-weight="400" text-anchor="middle" dominant-baseline="middle">5. HTTP 콜백: 후보 목록 또는 변환 파일</text>
-<rect x="410" y="638" width="220" height="42" rx="7" fill="#faf7ff" stroke="#e1d6f5" stroke-width="2"/>
-<text x="520" y="659" fill="#253247" font-family="Noto Sans CJK KR, sans-serif" font-size="18" font-weight="400" text-anchor="middle" dominant-baseline="middle">같은 요청에 결과 저장</text>
+<text x="900.0" y="590" fill="#6848ae" font-family="Noto Sans CJK KR, sans-serif" font-size="21" font-weight="400" text-anchor="middle" dominant-baseline="middle">5. HTTP callback: candidate list or converted file</text>
+<rect x="390" y="638" width="260" height="42" rx="7" fill="#faf7ff" stroke="#e1d6f5" stroke-width="2"/>
+<text x="520" y="659" fill="#253247" font-family="Noto Sans CJK KR, sans-serif" font-size="18" font-weight="400" text-anchor="middle" dominant-baseline="middle">Save result to same request</text>
 <line x1="140" y1="726" x2="520" y2="726" stroke="#426b91" stroke-width="3"/>
 <polygon points="520,726 507,719 507,733" fill="#426b91"/>
-<text x="330.0" y="702" fill="#426b91" font-family="Noto Sans CJK KR, sans-serif" font-size="21" font-weight="400" text-anchor="middle" dominant-baseline="middle">6. 상태·결과 조회</text>
+<text x="330.0" y="702" fill="#426b91" font-family="Noto Sans CJK KR, sans-serif" font-size="21" font-weight="400" text-anchor="middle" dominant-baseline="middle">6. Query status and result</text>
 <line x1="520" y1="792" x2="140" y2="792" stroke="#426b91" stroke-width="3"/>
 <polygon points="140,792 153,785 153,799" fill="#426b91"/>
-<text x="330.0" y="768" fill="#426b91" font-family="Noto Sans CJK KR, sans-serif" font-size="21" font-weight="400" text-anchor="middle" dominant-baseline="middle">7. 가수 후보 / 재생 URL</text>
+<text x="330.0" y="768" fill="#426b91" font-family="Noto Sans CJK KR, sans-serif" font-size="21" font-weight="400" text-anchor="middle" dominant-baseline="middle">7. Singer candidates / playback URL</text>
 <line x1="520" y1="858" x2="140" y2="858" stroke="#426b91" stroke-width="3" stroke-dasharray="7 7"/>
 <polygon points="140,858 153,851 153,865" fill="#426b91"/>
-<text x="330.0" y="834" fill="#426b91" font-family="Noto Sans CJK KR, sans-serif" font-size="21" font-weight="400" text-anchor="middle" dominant-baseline="middle">변환 완료 시 WebSocket 알림</text>
-<text x="720" y="918" fill="#617085" font-family="Noto Sans CJK KR, sans-serif" font-size="21" font-weight="400" text-anchor="middle" dominant-baseline="middle">검색 화면: 3초 주기 조회   ·   변환 화면: WebSocket 알림 + 3초 주기 조회</text>
+<text x="330.0" y="834" fill="#426b91" font-family="Noto Sans CJK KR, sans-serif" font-size="21" font-weight="400" text-anchor="middle" dominant-baseline="middle">WebSocket: conversion complete</text>
+<text x="720" y="918" fill="#617085" font-family="Noto Sans CJK KR, sans-serif" font-size="21" font-weight="400" text-anchor="middle" dominant-baseline="middle">Search screen: poll every 3 seconds   ·   Conversion screen: WebSocket notification + poll every 3 seconds</text>
 </svg>
